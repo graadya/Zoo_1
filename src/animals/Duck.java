@@ -3,15 +3,9 @@ package animals;
 import food.Food;
 
 public class Duck extends Herbivore implements Run, Fly, Swim, Voice {
-  public Duck(int scaleOfSatiety) {
-    super("Дональд", scaleOfSatiety);
+  public Duck(int scaleOfSatiety, int size) {
+    super("Дональд", scaleOfSatiety, size);
   }
-
-  @Override
-  public void eat(Food food) {
-    super.eat(food);
-  }
-
   @Override
   public void fly() {
     System.out.println(getName() + " пытается взлететь, но над ним сетка");

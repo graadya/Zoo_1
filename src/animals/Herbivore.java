@@ -6,8 +6,8 @@ import food.Meat;
 
 public abstract class Herbivore extends Animal {
 
-  public Herbivore(String name, int scaleOfSatiety) {
-    super(name, scaleOfSatiety);
+  public Herbivore(String name, int scaleOfSatiety,int size) {
+    super(name, scaleOfSatiety, size);
   }
 
   public String getName() {

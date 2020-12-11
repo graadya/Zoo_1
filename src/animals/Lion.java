@@ -1,8 +1,8 @@
 package animals;
 
 public class Lion extends Carnivorous implements Run, Voice, Fly {
-  public Lion(int scaleOfSatiety) {
-    super("Лев", scaleOfSatiety);
+  public Lion(int scaleOfSatiety, int size) {
+    super("Лев", scaleOfSatiety, size);
   }
 
   @Override
