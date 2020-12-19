@@ -6,8 +6,8 @@ import food.Grass;
 import java.util.Objects;
 
 public abstract class Animal {
-  public String name;
-  public int scaleOfSatiety;
+  protected String name;
+  protected int scaleOfSatiety;
   protected Integer id = 0;
   private static Integer count = 0;
   protected int size;
