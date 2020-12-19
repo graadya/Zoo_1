@@ -2,6 +2,8 @@ package animals;
 
 import food.Food;
 import food.Grass;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 import java.util.Objects;
 
@@ -11,6 +13,7 @@ public abstract class Animal {
   protected Integer id = 0;
   private static Integer count = 0;
   protected int size;
+  static final Logger LOGGER = LogManager.getLogger(Animal.class);
 
   public Animal(String name, int scaleOfSatiety, int size) {
     this.name = name;
@@ -24,7 +27,7 @@ public abstract class Animal {
       if(scaleOfSatiety <3) {
         System.out.println(name + " ест " + food + ". Сытость составляет " + (scaleOfSatiety++));
         if (scaleOfSatiety >= 3) {
-          System.out.println(name + " больше не хочет есть.");
+         LOGGER.info(name + " больше не хочет есть.");
         }
       }
     } else throw new WrongFoodException(name + " не ест " + food);
